@@ -1,0 +1,12 @@
+<ion-list no-lines *ngFor="let member of groupMembers">
+	<ion-item>
+	  <ion-thumbnail item-left item-start>
+	  	<img src={{member.ProfileImg}}>
+	  </ion-thumbnail>	
+	  <h2>{{member.TweeterID}}</h2>
+	  <xpnkmember-tweets #elem [groupTweets]="groupTweets" [xpnkuser]="member.XpnkID"></xpnkmember-tweets>
+	  <xpnkmember-instagrams #elem [groupInstagrams]="groupInstagrams" [xpnkuser]="member.XpnkID"></xpnkmember-instagrams>
+	  <xpnkmember-disqusions #elem [groupDisqusions]="groupDisqusions" [xpnkuser]="member.XpnkID"></xpnkmember-disqusions>
+	  <xpnk-filtered-posts></xpnk-filtered-posts>
+	</ion-item>  
+</ion-list>

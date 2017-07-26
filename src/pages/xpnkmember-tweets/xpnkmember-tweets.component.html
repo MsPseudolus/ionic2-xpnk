@@ -1,0 +1,13 @@
+<span>{{testtext}}</span>
+<button ion-button small icon-start (click)="memberTweetsFilter()">
+	<span class="button-inner">
+	<ion-icon name="logo-twitter" role="img" class="icon icon-ios"></ion-icon>
+		
+	</span>
+</button>
+<div *ngIf="filteredTweets$ as filteredTweets">
+  <li *ngFor="let filteredTweet of filteredTweets">
+  <ng2-tweet tweetId="{{ filteredTweet.TweetID }}"></ng2-tweet>
+  </li>
+</div> 
+
