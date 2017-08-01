@@ -1,12 +1,9 @@
 import { Component, OnInit }               from '@angular/core';
 import { GroupComponent }                  from '../group/group.component';
+
+import { XpnkFilteredPostsComponent }      from '../xpnk-filtered-posts/xpnk-filtered-posts.component';
+
 import { GroupMembersProvider }            from '../../providers/group-members-service/group-members-service';
-
-import { XpnkMemberTweetsComponent }       from '../xpnkmember-tweets/xpnkmember-tweets.component';
-import { XpnkMemberInstagramsComponent }   from '../xpnkmember-instagrams/xpnkmember-instagrams.component';
-import { XpnkMemberDisqusionsComponent }   from '../xpnkmember-disqusions/xpnkmember-disqusions.component';
-
-import { XpnkFilteredPostsPage }           from '../../pages/xpnk-filtered-posts/xpnk-filtered-posts';
 import { TwitterServiceProvider }          from '../../providers/twitter-service/twitter-service';
 import { InstagramServiceProvider }        from '../../providers/instagram-service/instagram-service';
 import { DisqusServiceProvider }           from '../../providers/disqus-service/disqus-service';
@@ -36,7 +33,7 @@ export class GroupMember {
                                             TwitterServiceProvider,
                                             InstagramServiceProvider,
                                             DisqusServiceProvider
-                                            ]
+                                          ]
 })
 
 export class GroupMembersComponent implements OnInit {
@@ -46,10 +43,11 @@ export class GroupMembersComponent implements OnInit {
   groupDisqusions:                        XpnkMemberDisqusions[];
  
   constructor( 
-    private groupMembersProvider: GroupMembersProvider, 
-    private groupTweetsService: TwitterServiceProvider,
-    private groupInstagramsService: InstagramServiceProvider,
-    private groupDisqusionsService: DisqusServiceProvider ) { }
+    private groupMembersProvider:         GroupMembersProvider, 
+    private groupTweetsService:           TwitterServiceProvider,
+    private groupInstagramsService:       InstagramServiceProvider,
+    private groupDisqusionsService:       DisqusServiceProvider 
+  ) { }
 
   getGroupMembers(): void {
     this.groupMembersProvider.getGroupMembers()

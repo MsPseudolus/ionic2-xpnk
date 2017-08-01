@@ -1,10 +1,8 @@
-import { Injectable } 						from '@angular/core';
-import { Http, Response } 							from '@angular/http';
-import 										'rxjs/add/operator/map';
-import 										'rxjs/add/operator/do';
-import { Observable } 						from 'rxjs/Observable';
-
-import { XpnkMemberTweets }                 from '../../pages/xpnkMemberTweets';
+import { Injectable } 						                      from '@angular/core';
+import { Http, Response } 							                from '@angular/http';
+import 										                              'rxjs/add/operator/map';
+import 										                              'rxjs/add/operator/do';
+import { Observable } 						                      from 'rxjs/Observable';
 
 /*
   Generated class for the TwitterServiceProvider provider.
@@ -12,6 +10,7 @@ import { XpnkMemberTweets }                 from '../../pages/xpnkMemberTweets';
   See https://angular.io/docs/ts/latest/guide/dependency-injection.html
   for more info on providers and Angular DI.
 */
+
 @Injectable()
 export class TwitterServiceProvider {
 

@@ -1,0 +1,24 @@
+<ion-row>
+<ion-col col-auto>
+<div *ngIf="twitSelected">
+  <ion-list *ngFor="let filteredTweet of filteredTweets$">
+  <ng2-tweet tweetId="{{ filteredTweet.TweetID }}"></ng2-tweet>
+  </ion-list>
+</div> 
+
+<div *ngIf="instaSelected">
+  <ion-list *ngFor="let filteredInstagram of filteredInstagrams$">
+  <ion-item [innerHTML]="filteredInstagram.InstagramOembed"></ion-item>
+  </ion-list>
+</div>
+
+<div *ngIf="disqusSelected">
+  <ion-list *ngFor="let filteredPost of filteredDisqusions$">
+  <ion-card>
+  	<ion-card-content text-wrap [innerHTML]="filteredPost.DisqusOembed">
+  	</ion-card-content>
+  </ion-card>	
+  </ion-list>
+</div> 
+</ion-col>
+</ion-row>

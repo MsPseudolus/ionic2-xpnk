@@ -1,12 +1,24 @@
 <ion-list no-lines *ngFor="let member of groupMembers">
-	<ion-item>
-	  <ion-thumbnail item-left item-start>
-	  	<img src={{member.ProfileImg}}>
-	  </ion-thumbnail>	
-	  <h2>{{member.TweeterID}}</h2>
-	  <xpnkmember-tweets #elem [groupTweets]="groupTweets" [xpnkuser]="member.XpnkID"></xpnkmember-tweets>
-	  <xpnkmember-instagrams #elem [groupInstagrams]="groupInstagrams" [xpnkuser]="member.XpnkID"></xpnkmember-instagrams>
-	  <xpnkmember-disqusions #elem [groupDisqusions]="groupDisqusions" [xpnkuser]="member.XpnkID"></xpnkmember-disqusions>
-	  <xpnk-filtered-posts></xpnk-filtered-posts>
-	</ion-item>  
+	<ion-grid>
+		<ion-row>
+			<h3>{{member.TweeterID}}</h3>
+		</ion-row>
+		<ion-row>	
+			<ion-col>
+
+				  <ion-thumbnail item-start>
+				  	<img src={{member.ProfileImg}} style="max-width: 55px;">
+				  </ion-thumbnail>	
+
+			</ion-col>
+			<ion-col>
+				<xpnk-member-buttons 
+					[groupTweets]="groupTweets" 
+					[groupInstagrams]="groupInstagrams" 
+					[groupDisqusions]="groupDisqusions" 
+					[xpnkuser]="member.XpnkID" >		
+				</xpnk-member-buttons>
+			</ion-col>
+		</ion-row>	
+	</ion-grid>
 </ion-list>

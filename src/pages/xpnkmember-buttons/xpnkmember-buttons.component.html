@@ -1,0 +1,25 @@
+<button ion-button small icon-start (click)="showTweets()">
+	<span class="button-inner">
+	<ion-icon name="logo-twitter" role="img" class="icon icon-ios"></ion-icon>
+	</span>
+</button>
+<button ion-button small icon-start (click)="showInsta()">
+	<span class="button-inner">
+	<ion-icon name="logo-instagram" role="img" class="icon icon-ios"></ion-icon>
+		
+	</span>
+</button>
+<button ion-button small icon-start (click)="showDisqus()">
+	<span class="button-inner">
+		<ion-icon name="chatbubbles" role="img" class="icon icon-ios"></ion-icon>
+	</span>
+</button>
+<xpnk-filtered-posts 
+	[filteredDisqusions$]="filteredDisqusions$" 
+	[filteredTweets$]="filteredTweets$" 
+	[filteredInstagrams$]="filteredInstagrams$"
+	[disqusSelected]="disqusSelected"
+	[instaSelected]="instaSelected"
+	[twitSelected]="twitSelected">
+</xpnk-filtered-posts>
+

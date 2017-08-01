@@ -1,5 +1,4 @@
-import { Component, OnInit } 			from '@angular/core';
-import { GroupMembersComponent }        from '../group-members/group-members.component';
+import { Component } 			from '@angular/core';
 
 export class GroupData {
 	groupName:                   string;

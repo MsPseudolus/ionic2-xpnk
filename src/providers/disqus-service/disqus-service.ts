@@ -1,10 +1,11 @@
-import { Injectable } 						from '@angular/core';
-import { Http, Response } 					from '@angular/http';
-import 										'rxjs/add/operator/map';
-import 										'rxjs/add/operator/do';
-import { Observable } 						from 'rxjs/Observable';
+import { Injectable, Input } 						  from '@angular/core';
+import { Http, Response } 					      from '@angular/http';
+import 										                'rxjs/add/operator/map';
+import 										                'rxjs/add/operator/do';
+import { Observable } 						        from 'rxjs/Observable';
 
-import { XpnkMemberDisqusions }              from '../../pages/xpnkMemberDisqusions';
+import { XpnkDisqusion }                   from '../../pages/xpnkDisqusion';
+import { XpnkMemberDisqusions }            from '../../pages/xpnkMemberDisqusions';
 
 /*
   Generated class for the DisqusService provider.
@@ -12,6 +13,7 @@ import { XpnkMemberDisqusions }              from '../../pages/xpnkMemberDisqusi
   See https://angular.io/docs/ts/latest/guide/dependency-injection.html
   for more info on providers and Angular DI.
 */
+
 @Injectable()
 export class DisqusServiceProvider {
 
@@ -21,7 +23,7 @@ export class DisqusServiceProvider {
     console.log('I am DisqusServiceProvider Provider');
   }
 
-    getDisqusions(){
+  getDisqusions(){
   	return this.http.get(this.url)
   	.do( ( res: Response ) => console.log( res ) )
   	.map( this.extractData )
@@ -36,5 +38,4 @@ export class DisqusServiceProvider {
 	private extractData( res: Response ) {
 		return res.json();
 	}
-
 }

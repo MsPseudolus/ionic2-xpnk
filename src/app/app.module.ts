@@ -8,13 +8,11 @@ import { Ng2TweetModule }                             from 'ng2-tweet/lib/index'
 
 import { GroupComponent }                             from '../pages/group/group.component';
 import { GroupMembersComponent }                      from '../pages/group-members/group-members.component';
-import { XpnkFilteredPostsPage }                      from '../pages/xpnk-filtered-posts/xpnk-filtered-posts';
 
 import { GroupMembersProvider }                       from '../providers/group-members-service/group-members-service';
 
-import { XpnkMemberTweetsComponent }                  from '../pages/xpnkmember-tweets/xpnkmember-tweets.component';
-import { XpnkMemberInstagramsComponent }              from '../pages/xpnkmember-instagrams/xpnkmember-instagrams.component';
-import { XpnkMemberDisqusionsComponent }              from '../pages/xpnkmember-disqusions/xpnkmember-disqusions.component';
+import { XpnkMemberButtonsComponent }                 from '../pages/xpnkmember-buttons/xpnkmember-buttons.component';
+import { XpnkFilteredPostsComponent }                 from '../pages/xpnk-filtered-posts/xpnk-filtered-posts.component';
 
 import { AboutPage }                                  from '../pages/about/about';
 import { ContactPage }                                from '../pages/contact/contact';
@@ -37,10 +35,8 @@ import { DisqusServiceProvider }                      from '../providers/disqus-
     TabsPage,
     GroupComponent,
     GroupMembersComponent,
-    XpnkFilteredPostsPage,
-    XpnkMemberTweetsComponent,
-    XpnkMemberInstagramsComponent,
-    XpnkMemberDisqusionsComponent
+    XpnkMemberButtonsComponent,
+    XpnkFilteredPostsComponent
   ],
   imports: [
     BrowserModule,

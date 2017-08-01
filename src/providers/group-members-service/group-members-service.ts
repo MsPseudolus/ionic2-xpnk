@@ -12,6 +12,7 @@ import { GroupMember }                from '../../pages/group-members/group-memb
   See https://angular.io/docs/ts/latest/guide/dependency-injection.html
   for more info on providers and Angular DI.
 */
+
 @Injectable()
 export class GroupMembersProvider {
 
